@@ -36,11 +36,6 @@ namespace MergedIntervals.Core
 
         public IEnumerable<Interval> Split(Interval other)
         {
-            if(other.Begin == Begin && other.End == End)
-            {
-                return new List<Interval>{new Interval(Begin, End)};
-            }
-            
             if(other.Begin == Begin && other.End < End)
             {
                 return new List<Interval>{new Interval(other.End, End)};
