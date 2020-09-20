@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Algo.Intervals;
+using MergedIntervals.Core;
 
-namespace Algo
+namespace MergedIntervals
 {
     class Program
     {

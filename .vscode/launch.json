@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Algo/bin/Debug/netcoreapp3.1/Algo.dll",
+            "program": "${workspaceFolder}/Algo/bin/Debug/netcoreapp3.1/MergedIntervals.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Algo",
             "console": "internalConsole",

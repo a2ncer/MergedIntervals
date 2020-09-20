@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algo", "Algo\Algo.csproj", "{3AA0AB0C-167D-4BFE-81E6-7E01E23A765F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergedIntervals", "MergedIntervals\MergedIntervals.csproj", "{3AA0AB0C-167D-4BFE-81E6-7E01E23A765F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algo.Tests", "Algo.Tests\Algo.Tests.csproj", "{007435E7-A58C-485C-BCFF-C9C86C35DC1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergedIntervals.Core.Tests", "Tests\MergedIntervals.Core.Tests\MergedIntervals.Core.Tests.csproj", "{007435E7-A58C-485C-BCFF-C9C86C35DC1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algo.Intervals", "Algo.Intervals\Algo.Intervals.csproj", "{C5315F8D-99B1-41B8-999C-4B72CC6B008D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergedIntervals.Core", "MergedIntervals.Core\MergedIntervals.Core.csproj", "{C5315F8D-99B1-41B8-999C-4B72CC6B008D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8BE9E1F0-FB8E-11EA-855E-7D5A6E8DA7FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,5 +60,8 @@ Global
 		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Release|x64.Build.0 = Release|Any CPU
 		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Release|x86.ActiveCfg = Release|Any CPU
 		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{007435E7-A58C-485C-BCFF-C9C86C35DC1C} = {8BE9E1F0-FB8E-11EA-855E-7D5A6E8DA7FE}
 	EndGlobalSection
 EndGlobal

@@ -1,10 +1,10 @@
 using System.Linq;
 using System.Text.RegularExpressions;
-using Algo.Intervals;
-using Algo.Intervals.Extensions;
+using MergedIntervals.Core;
+using MergedIntervals.Core.Extensions;
 using Xunit;
 
-namespace Algo.Tests
+namespace MergedIntervals.Core.Tests
 {
     public class IntervalCollectionTests
     {

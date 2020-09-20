@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
-using Algo.Intervals;
+using MergedIntervals.Core;
 using Xunit;
 
-namespace Algo.Tests
+namespace MergedIntervals.Core.Tests
 {
     public class IntervalTests
     {

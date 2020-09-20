@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Algo.Intervals\Algo.Intervals.csproj" />
+    <ProjectReference Include="..\..\MergedIntervals.Core\MergedIntervals.Core.csproj" />
   </ItemGroup>
 
 </Project>
