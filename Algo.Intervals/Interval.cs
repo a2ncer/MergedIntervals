@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Algo
+namespace Algo.Intervals
 {
     public class Interval
     {

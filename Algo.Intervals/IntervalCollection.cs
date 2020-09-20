@@ -2,7 +2,7 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Algo
+namespace Algo.Intervals
 {
     public class IntervalCollection : IEnumerable<Interval>
     {
@@ -18,9 +18,9 @@ namespace Algo
         public void Add(int begin, int end)
         {
             var interval = new Interval(begin, end);
-            if (_list.ContainsKey(begin))
+            if (_list.ContainsKey(begin) && !_list[begin].ContainsKey(end))
             {
-                _list[begin].TryAdd(end, interval);
+                _list[begin].Add(end, interval);
             }
             else
             {

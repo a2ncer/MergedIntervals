@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Algo
+namespace Algo.Intervals.Extensions
 {
     public static class IntervalCollectionExtensions
     {

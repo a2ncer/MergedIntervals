@@ -1,5 +1,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
+using Algo.Intervals;
+using Algo.Intervals.Extensions;
 using Xunit;
 
 namespace Algo.Tests

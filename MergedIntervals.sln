@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algo", "Algo\Algo.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algo.Tests", "Algo.Tests\Algo.Tests.csproj", "{007435E7-A58C-485C-BCFF-C9C86C35DC1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algo.Intervals", "Algo.Intervals\Algo.Intervals.csproj", "{C5315F8D-99B1-41B8-999C-4B72CC6B008D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{007435E7-A58C-485C-BCFF-C9C86C35DC1C}.Release|x64.Build.0 = Release|Any CPU
 		{007435E7-A58C-485C-BCFF-C9C86C35DC1C}.Release|x86.ActiveCfg = Release|Any CPU
 		{007435E7-A58C-485C-BCFF-C9C86C35DC1C}.Release|x86.Build.0 = Release|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Debug|x64.Build.0 = Debug|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Debug|x86.Build.0 = Debug|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Release|x64.ActiveCfg = Release|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Release|x64.Build.0 = Release|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Release|x86.ActiveCfg = Release|Any CPU
+		{C5315F8D-99B1-41B8-999C-4B72CC6B008D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

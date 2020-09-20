@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Algo\Algo.csproj" />
+    <ProjectReference Include="..\Algo.Intervals\Algo.Intervals.csproj" />
   </ItemGroup>
 
 </Project>
