@@ -30,8 +30,8 @@ namespace MergedIntervals
             //var ica2 = new IntervalCollectionAggregator(MERGE_DISTANCE, BIG_FILE_PATH);
             //ica2.Process();
 
-            var ica3 = new IntervalCollectionAggregator(MERGE_DISTANCE, THE_BIGGEST_FILE_PATH);
-            ica3.Process();
+            // var ica3 = new IntervalCollectionAggregator(MERGE_DISTANCE, THE_BIGGEST_FILE_PATH);
+            // ica3.Process();
 
             //var fa = new FileAggregator(MERGE_DISTANCE, BIG_FILE_PATH);
             //fa.Process();
@@ -40,8 +40,8 @@ namespace MergedIntervals
             //var fa2 = new FileAggregator(MERGE_DISTANCE, SMALL_FILE_PATH_WITH_DELETED);
             //fa2.Process();
 
-            //var fa3 = new FileAggregator(MERGE_DISTANCE, BIG_FILE_PATH_WITH_DELETED);
-            //fa3.Process();
+            var fa3 = new FileAggregator(MERGE_DISTANCE, BIG_FILE_PATH_WITH_DELETED);
+            fa3.Process();
 
             //var fa4 = new FileAggregator(MERGE_DISTANCE, THE_BIGGEST_FILE_PATH);
             //fa4.Process();

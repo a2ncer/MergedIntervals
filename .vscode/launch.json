@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Algo/bin/Debug/netcoreapp3.1/MergedIntervals.dll",
+            "program": "${workspaceFolder}/MergedIntervals/bin/Debug/netcoreapp3.1/MergedIntervals.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Algo",
+            "cwd": "${workspaceFolder}/MergedIntervals",
             "console": "internalConsole",
             "stopAtEntry": false
         },
