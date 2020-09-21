@@ -38,11 +38,52 @@ You can delete “parts” of an interval with “DELETE” action. Delete is di
 2. 5,7, added OUTPUT: [1,7]
 3. 2,3, deleted OUTPUT: [1,2] [3,7]
 
-## Solution structure
-
-## MergedIntervals API
-
 ## Sample use cases
+### IntervalCollection use cases
+```c#
+var collection = new IntervalCollection {{2,6},{1,4},{8,10},{1,3},{15,18}};
+Console.WriteLine(string.Join(" ",collection.Select(x => $"[{x.Begin},{x.End}]")));
+```
+Output:
+```
+[1,6] [8,10] [15,18]
+```
+Remove method
+```c#
+collection.Remove(2,6);
+```
+Output:
+```
+[1,4] [8,10] [15,18]
+```
+Delete method
+```c#
+var data = collection.Delete(16,17);
+
+```
+Output:
+```
+[1,4] [8,10] [15,16] [17,18]
+```
+
+### Usage of main sample
+There are two implementations for file processors - IntervalCollectionAggregator and FileAggregator.
+IntervalCollectionAggregator uses IntervalCollection while reading file and calls appropriate methods. All data is stored inside collection instance. This implementation doesn't support DELETE action. 
+
+FileAggregator also uses IntervalCollection, but it do not store all data in the collection instance, therefore it uses previous calculated result. This implementation supports DELETE action.
+When we have REMOVE action we trying to find previous interval in the file and recalculate from that point to the current position in file.
+
+There some samples you can run:
+```
+[1] IntervalCollectionAggregator 6 rows file.
+[2] IntervalCollectionAggregator 1000 rows file.
+[3] IntervalCollectionAggregator 1_000_000 rows file.
+[4] FileAggregator 6 rows file.
+[5] FileAggregator 1000 rows file.
+[6] FileAggregator with DELETED 8 rows file.
+[7] FileAggregator with DELETED 1000 rows file.
+[8] FileAggregator 1_000_000 rows file.
+```
 
 ### Generation of sample data
 ```c#
