@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using MergedIntervals.Core;
 using Xunit;
 
 namespace MergedIntervals.Core.Tests
