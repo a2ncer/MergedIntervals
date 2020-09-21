@@ -40,7 +40,6 @@ namespace MergedIntervals.Core.Tests
         [InlineData(0, 3,7,0,2)]
         [InlineData(0, 3,7,8,10)]
         [InlineData(5, 1,5,11,15)]
-        [InlineData(5, 1,5,11,15)]
         [InlineData(5, -5,-1, -15, -11)]
         public void TryMerge_When_Can_Not_Be_Merged_Then_Fail(uint mergeDistance, int begin1, int end1, int begin2, int end2)
         {
