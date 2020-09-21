@@ -18,9 +18,12 @@ namespace MergedIntervals.Core
         public void Add(int begin, int end)
         {
             var interval = new Interval(begin, end);
-            if (_list.ContainsKey(begin) && !_list[begin].ContainsKey(end))
+            if (_list.ContainsKey(begin))
             {
-                _list[begin].Add(end, interval);
+                if (!_list[begin].ContainsKey(end))
+                {
+                    _list[begin].Add(end, interval);
+                }
             }
             else
             {
@@ -32,7 +35,14 @@ namespace MergedIntervals.Core
         {
             if (_list.ContainsKey(begin) && _list[begin].ContainsKey(end))
             {
-                return _list[begin].Remove(end);
+                if (_list[begin].Count() > 1)
+                {
+                    _list[begin].Remove(end);
+                }
+                else
+                {
+                    _list.Remove(begin);
+                }
             }
 
             return false;

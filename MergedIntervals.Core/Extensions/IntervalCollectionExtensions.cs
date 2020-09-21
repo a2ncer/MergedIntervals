@@ -32,5 +32,25 @@ namespace MergedIntervals.Core.Extensions
 
             return merged;
         }
+
+        public static IntervalCollection AddRange(this IntervalCollection collection, IEnumerable<Interval> range)
+        {
+            if (collection is null)
+            {
+                throw new ArgumentNullException(nameof(collection));
+            }
+
+            if (range is null)
+            {
+                throw new ArgumentNullException(nameof(range));
+            }
+
+            foreach (var interval in range)
+            {
+                collection.Add(interval.Begin, interval.End);
+            }
+
+            return collection;
+        }
     }
 }
