@@ -26,12 +26,12 @@ Merge distance is 7 – assume in the following example the input is arriving in
 |4 |15 |31 |ADDED| [1,31] [55,89]|
 |5 |10 |15 |ADDED| [1,31] [55,89]|
 |6 |1 |20 |REMOVED| [10,31] [55,89]|
-|7 |10 |15 |DELETE| [15,31] [55,89]|
+|7 |10 |15 |DELETED| [15,31] [55,89]|
 |8 |16 |40 |ADDED| [15,40] [55,89]|
 
 The Action column is a string value which is either “ADDED” or “REMOVED”, which tells you that your interval was added or removed.
 Removed means that the original interval was removed from the input stream. In the example above, when Removed is called on the action in sequence 6, it is actually removing the interval that showed up in sequence 1.
-You can delete “parts” of an interval with “DELETE” action. Delete is different than remove – while remove will remove an interval from the original stream, delete will delete an interval block from the current set of merged intervals. 
+You can delete “parts” of an interval with “DELETED” action. Delete is different than remove – while remove will remove an interval from the original stream, delete will delete an interval block from the current set of merged intervals. 
 
 **Example:**
 1. 1,6, added OUTPUT: [1,6]
