@@ -1,53 +1,47 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
-using System.Reflection.Metadata;
-using MergedIntervals.Core;
 
 namespace MergedIntervals
 {
     class Program
     {
         const uint MERGE_DISTANCE = 7;
-        const string SMALL_FILE_PATH = "input.txt";
-        const string SMALL_FILE_PATH_WITH_DELETED = "input_deleted.txt";
-        const string BIG_FILE_PATH = "1000_input.txt";
-        const string THE_BIGGEST_FILE_PATH = "1_000_000_input.txt";
-        const string BIG_FILE_PATH_WITH_DELETED = "1000_input_deleted.txt";
-        //1 1 20 ADDED [1, 20]
-        //2 55 58 ADDED [1, 20][55, 58]
-        //3 60 89 ADDED [1, 20][55, 89]
-        //4 15 31 ADDED [1, 31][55, 89]
-        //5 10 15 ADDED [1, 31][55, 89]
-        //6 1 20 REMOVED [10, 31][55, 89]
-        //7 10 15 DELETED [15, 31][55, 89]
-        //8 16 40 ADDED [15, 40][55, 89]
+        const string SMALL_FILE_PATH = "Samples/input.txt";
+        const string SMALL_FILE_PATH_WITH_DELETED = "Samples/input_deleted.txt";
+        const string BIG_FILE_PATH = "Samples/1000_input.txt";
+        const string THE_BIGGEST_FILE_PATH = "Samples/1_000_000_input.txt";
+        const string BIG_FILE_PATH_WITH_DELETED = "Samples/1000_input_deleted.txt";
+
         static void Main(string[] args)
         {
-            //var ica = new IntervalCollectionAggregator(MERGE_DISTANCE, SMALL_FILE_PATH);
-            //ica.Process();
+            Console.WriteLine("Samples");
+            Console.WriteLine("[1] IntervalCollectionAggregator 6 rows file.");
+            Console.WriteLine("[2] IntervalCollectionAggregator 1000 rows file.");
+            Console.WriteLine("[3] IntervalCollectionAggregator 1_000_000 rows file.");
+            Console.WriteLine("[4] FileAggregator 6 rows file.");
+            Console.WriteLine("[5] FileAggregator 1000 rows file.");
+            Console.WriteLine("[6] FileAggregator with DELETED 8 rows file.");
+            Console.WriteLine("[7] FileAggregator with DELETED 1000 rows file.");
+            Console.WriteLine("[8] FileAggregator 1_000_000 rows file.");
+            Console.WriteLine("Enter command number: ");
+            
+            if (!int.TryParse(Console.ReadLine(), out int input))
+            {
+                Console.WriteLine("Incorrect command");
+                return;
+            }
 
-            //var ica2 = new IntervalCollectionAggregator(MERGE_DISTANCE, BIG_FILE_PATH);
-            //ica2.Process();
-
-            // var ica3 = new IntervalCollectionAggregator(MERGE_DISTANCE, THE_BIGGEST_FILE_PATH);
-            // ica3.Process();
-
-            //var fa = new FileAggregator(MERGE_DISTANCE, BIG_FILE_PATH);
-            //fa.Process();
-
-
-            //var fa2 = new FileAggregator(MERGE_DISTANCE, SMALL_FILE_PATH_WITH_DELETED);
-            //fa2.Process();
-
-            var fa3 = new FileAggregator(MERGE_DISTANCE, BIG_FILE_PATH_WITH_DELETED);
-            fa3.Process();
-
-            //var fa4 = new FileAggregator(MERGE_DISTANCE, THE_BIGGEST_FILE_PATH);
-            //fa4.Process();
-
-            //var generator = new IntervalGenerator("1_000_000_input.txt", 1, 10000, 1000000, 25);
-            //generator.Generate();
+            switch(input)
+            {
+                case 1: new IntervalCollectionAggregator(MERGE_DISTANCE, SMALL_FILE_PATH).Process(); break;
+                case 2: new IntervalCollectionAggregator(MERGE_DISTANCE, BIG_FILE_PATH).Process(); break;
+                case 3: new IntervalCollectionAggregator(MERGE_DISTANCE, THE_BIGGEST_FILE_PATH).Process(); break;
+                case 4: new FileAggregator(MERGE_DISTANCE, SMALL_FILE_PATH).Process(); break;
+                case 5: new FileAggregator(MERGE_DISTANCE, BIG_FILE_PATH).Process(); break;
+                case 6: new FileAggregator(MERGE_DISTANCE, SMALL_FILE_PATH_WITH_DELETED).Process();break;
+                case 7: new FileAggregator(MERGE_DISTANCE, BIG_FILE_PATH_WITH_DELETED).Process(); break;
+                case 8: new FileAggregator(MERGE_DISTANCE, THE_BIGGEST_FILE_PATH).Process(); break;
+                default: Console.WriteLine("Command not found");break;
+            }
         }
     }
 }

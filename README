@@ -1,1 +1,7 @@
-Merged intervals
+# Merged intervals with merge distance implementation in C#
+
+Samples
+```
+var generator = new IntervalGenerator("1_000_000_input.txt", 1, 10000, 1000000, 25);
+generator.Generate();
+```

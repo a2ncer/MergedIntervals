@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace MergedIntervals
 {
@@ -35,27 +34,26 @@ namespace MergedIntervals
                     var line = new IntervalLine();
                     line.LineNumber = i;
                     var size = new Random().Next(1, _maxWindowSize);
-                    //var intervalEnd = new Random().Next(_begin + size, _end + size);
-                    var intervalEnd = i + size;
+                    var intervalEnd = new Random().Next(_begin + size, _end + size);
                     var chance = new Random().NextDouble();
                     line.End = intervalEnd;
                     line.Begin = intervalEnd - size;
-                    //if (chance > 0.99)
-                    //{
-                    //    line = _list.Any() ? _list.Dequeue() : line;
+                    if (chance > 0.99)
+                    {
+                       line = _list.Any() ? _list.Dequeue() : line;
 
-                    //    var newBegin = line.Begin;
-                    //    var newEnd = (line.Begin + line.End) / 2;
+                       var newBegin = line.Begin;
+                       var newEnd = (line.Begin + line.End) / 2;
 
-                    //    if (newBegin < newEnd)
-                    //    {
-                    //        line.Begin = newBegin;
-                    //        line.End = newEnd;
-                    //    }
-                    //    line.LineNumber = i;
-                    //    line.Operation = LineOperation.DELETED;
-                    //}
-                    //else
+                       if (newBegin < newEnd)
+                       {
+                           line.Begin = newBegin;
+                           line.End = newEnd;
+                       }
+                       line.LineNumber = i;
+                       line.Operation = LineOperation.DELETED;
+                    }
+                    else
                     if (chance > 0.98 && chance < 0.99)
                     {
                         line = _list.Any() ? _list.Dequeue() : line;

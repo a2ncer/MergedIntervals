@@ -5,22 +5,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="1000_input.txt">
+    <None Update="Samples\1000_input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="1000_input_deleted.txt">
+    <None Update="Samples\1000_input_deleted.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="1000_input_deleted_worst.txt">
+    <None Update="Samples\1000_input_deleted_worst.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="1_000_000_input.txt">
+    <None Update="Samples\1_000_000_input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="input.txt">
+    <None Update="Samples\input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="input_deleted.txt">
+    <None Update="Samples\input_deleted.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
